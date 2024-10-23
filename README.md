@@ -46,7 +46,9 @@ composer require --dev almacareer/coding-standard
 1. Create `ecs.php` file in the root directory of your project and import the code-style rules:
 
 ```php
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 use Lmc\CodingStandard\Set\SetList;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
@@ -92,7 +94,9 @@ If needed, you can also override any default settings.
 Below find examples of some more opinionated checks you may want to add depending on your needs:
 
 ```php
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 use Lmc\CodingStandard\Set\SetList;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
@@ -133,7 +137,9 @@ See [EasyCodingStandard docs][ecs-docs] for more configuration options.
 You can configure your `ecs.php` file to entirely skip some files, disable specific checks, or suppress specific errors.
 
 ```php
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 use PHP_CodeSniffer\Standards\Generic\Sniffs\PHP\ForbiddenFunctionsSniff;
 use PHP_CodeSniffer\Standards\Squiz\Sniffs\Arrays\ArrayDeclarationSniff;

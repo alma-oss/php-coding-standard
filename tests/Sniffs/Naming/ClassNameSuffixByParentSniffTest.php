@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Lmc\CodingStandard\Sniffs\Naming;
 
@@ -7,10 +9,12 @@ use Lmc\CodingStandard\Sniffs\AbstractSniffTestCase;
 class ClassNameSuffixByParentSniffTest extends AbstractSniffTestCase
 {
     /**
-     * @test
      * @dataProvider provideFixtures
+     *
+     * @param array<int, string>|null $classSuffixes
+     * @param array<int, string> $expectedErrors
      */
-    public function shouldFixCode(string $fixtureFile, ?array $classSuffixes, array $expectedErrors): void
+    public function testShouldFixCode(string $fixtureFile, ?array $classSuffixes, array $expectedErrors): void
     {
         $sniff = $this->applyFixturesToSniff($fixtureFile);
 
@@ -28,15 +32,15 @@ class ClassNameSuffixByParentSniffTest extends AbstractSniffTestCase
     }
 
     /**
-     * @return array[]
+     * @return array<string, array{string, array<int, string>|null, array<int, string>}>
      */
-    public function provideFixtures(): array
+    public static function provideFixtures(): array
     {
         return [
             'wrong with default ruleset' => [
                 __DIR__ . '/Fixtures/ClassNameSuffixByParentSniffTest/CommandWrong.php.inc',
                 null,
-                [5 => 'Class "WronglyNamed" should have suffix "Command" by parent class/interface'],
+                [7 => 'Class "WronglyNamed" should have suffix "Command" by parent class/interface'],
             ],
             'properly named with default ruleset' => [
                 __DIR__ . '/Fixtures/ClassNameSuffixByParentSniffTest/CommandCorrect.php.inc',
@@ -46,7 +50,7 @@ class ClassNameSuffixByParentSniffTest extends AbstractSniffTestCase
             'wrong with custom ruleset' => [
                 __DIR__ . '/Fixtures/ClassNameSuffixByParentSniffTest/CustomWrong.php.inc',
                 ['ParentClass'],
-                [3 => 'Class "WronglyNamed" should have suffix "ParentClass" by parent class/interface'],
+                [5 => 'Class "WronglyNamed" should have suffix "ParentClass" by parent class/interface'],
             ],
             'properly named with custom ruleset' => [
                 __DIR__ . '/Fixtures/ClassNameSuffixByParentSniffTest/CustomCorrect.php.inc',
@@ -56,7 +60,7 @@ class ClassNameSuffixByParentSniffTest extends AbstractSniffTestCase
             'wrong with interface' => [
                 __DIR__ . '/Fixtures/ClassNameSuffixByParentSniffTest/InterfaceWrong.php.inc',
                 ['FooBarInterface'],
-                [3 => 'Class "WronglyNamed" should have suffix "FooBar" by parent class/interface'],
+                [5 => 'Class "WronglyNamed" should have suffix "FooBar" by parent class/interface'],
             ],
             'properly named interface' => [
                 __DIR__ . '/Fixtures/ClassNameSuffixByParentSniffTest/InterfaceCorrect.php.inc',
@@ -66,7 +70,7 @@ class ClassNameSuffixByParentSniffTest extends AbstractSniffTestCase
             'wrong with abstract class' => [
                 __DIR__ . '/Fixtures/ClassNameSuffixByParentSniffTest/AbstractWrong.php.inc',
                 ['AbstractSomething'],
-                [3 => 'Class "WronglyNamed" should have suffix "Something" by parent class/interface'],
+                [5 => 'Class "WronglyNamed" should have suffix "Something" by parent class/interface'],
             ],
             'properly with abstract class' => [
                 __DIR__ . '/Fixtures/ClassNameSuffixByParentSniffTest/AbstractCorrect.php.inc',

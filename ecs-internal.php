@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 use Lmc\CodingStandard\Set\SetList;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\PHP\ForbiddenFunctionsSniff;
@@ -18,7 +20,7 @@ return ECSConfig::configure()
             SetList::ALMACAREER,
         ],
     )
-    ->withConfiguredRule(PhpUnitTestAnnotationFixer::class, ['style' => 'annotation'])
+    ->withConfiguredRule(PhpUnitTestAnnotationFixer::class, ['style' => 'prefix'])
     ->withConfiguredRule(
         LineLengthFixer::class,
         ['line_length' => 120, 'break_long_lines' => true, 'inline_short_lines' => false],

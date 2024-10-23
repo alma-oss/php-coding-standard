@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Lmc\CodingStandard\Sniffs\Naming;
 
@@ -7,10 +9,11 @@ use Lmc\CodingStandard\Sniffs\AbstractSniffTestCase;
 class AbstractClassNameSniffTest extends AbstractSniffTestCase
 {
     /**
-     * @test
      * @dataProvider provideFixtures
+     *
+     * @param array<int, string> $expectedErrors
      */
-    public function shouldFixCode(string $fixtureFile, array $expectedErrors): void
+    public function testShouldFixCode(string $fixtureFile, array $expectedErrors): void
     {
         $sniff = $this->applyFixturesToSniff($fixtureFile);
         $sniff->process();
@@ -21,16 +24,16 @@ class AbstractClassNameSniffTest extends AbstractSniffTestCase
     }
 
     /**
-     * @return array[]
+     * @return array<string, array{string, array<int, string>}>
      */
-    public function provideFixtures(): array
+    public static function provideFixtures(): array
     {
         return [
             'wrongly named' => [
                 __DIR__ . '/Fixtures/AbstractClassNameSniffTest.wrong.php.inc',
                 [
-                    3 => 'Abstract class should have prefix "Abstract".',
-                    13 => 'Abstract class should have prefix "Abstract".',
+                    5 => 'Abstract class should have prefix "Abstract".',
+                    15 => 'Abstract class should have prefix "Abstract".',
                 ],
             ],
             'properly named' => [__DIR__ . '/Fixtures/AbstractClassNameSniffTest.correct.php.inc', []],
