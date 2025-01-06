@@ -638,7 +638,4 @@ return ECSConfig::configure()
         // Skip unwanted rules from ReturnTypeHintSniff
         ReturnTypeHintSniff::class . '.' . ReturnTypeHintSniff::CODE_MISSING_TRAVERSABLE_TYPE_HINT_SPECIFICATION => null,
         ReturnTypeHintSniff::class . '.' . ReturnTypeHintSniff::CODE_MISSING_ANY_TYPE_HINT => null,
-
-        // We use declare(strict_types=1); after opening tag
-        BlankLineAfterOpeningTagFixer::class => null,
     ]);
