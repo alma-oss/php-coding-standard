@@ -1,12 +1,12 @@
 {
     "name": "lmc/coding-standard",
-    "description": "Coding standard used in Alma Career Czechia (LMC) projects",
+    "description": "Coding standard used in Alma Career projects",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
             "name": "Alma Career",
-            "homepage": "https://github.com/almacareer/"
+            "homepage": "https://github.com/alma-oss/"
         }
     ],
     "require": {
