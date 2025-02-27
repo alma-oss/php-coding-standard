@@ -22,6 +22,7 @@ composer require --dev lmc/coding-standard
 ```php
 <?php declare(strict_types=1);
 
+use Lmc\CodingStandard\Set\SetList;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 return ECSConfig::configure()
@@ -29,7 +30,7 @@ return ECSConfig::configure()
     ->withRootFiles() // to also check ecs.php and all other php files in the root directory
     ->withSets(
         [
-            __DIR__ . '/vendor/lmc/coding-standard/ecs.php',
+            SetList::ALMACAREER,
         ]
     );
 ```
@@ -67,6 +68,7 @@ Below find examples of some more opinionated checks you may want to add dependin
 ```php
 <?php declare(strict_types=1);
 
+use Lmc\CodingStandard\Set\SetList;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitTestAnnotationFixer;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
@@ -75,7 +77,7 @@ return ECSConfig::configure()
     /* (...) */
     ->withSets(
         [
-            __DIR__ . '/vendor/lmc/coding-standard/ecs.php',
+            SetList::ALMACAREER,
         ]
     )
     ->withRules(
