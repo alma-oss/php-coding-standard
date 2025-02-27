@@ -7,8 +7,6 @@ parameters:
         - vendor/symplify/easy-coding-standard/vendor/squizlabs/php_codesniffer/autoload.php
         - vendor/symplify/easy-coding-standard/vendor/squizlabs/php_codesniffer/src/Util/Tokens.php
     ignoreErrors:
-        - path: %currentWorkingDirectory%/tests/Fixer/SpecifyArgSeparatorFixerTest.php
-          message: '#Parameter \#1 \$code of static method PhpCsFixer\\Tokenizer\\Tokens::fromCode\(\) expects string, string\|false given#'
         - path: %currentWorkingDirectory%/tests/Integration/CodingStandardTest.php
           message: '#Parameter \#2 \$actualString of method PHPUnit\\Framework\\Assert::assertStringEqualsFile\(\) expects string, string\|false given#'
         - identifier: missingType.iterableValue
