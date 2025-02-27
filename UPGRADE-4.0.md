@@ -35,7 +35,7 @@ Now change the way you set rules, skip tests and import sets:
 | `$parameters->set(Option::SKIP, ...)` | `ECSConfig::configure()->withSkip()`                                                      |
 | `$containerConfigurator->import()`    | `ECSConfig::configure()->withSets()`                                                      |
 
-See [examples in Usage section of our README](https://github.com/lmc-eu/php-coding-standard?tab=readme-ov-file#usage)
+See [examples in Usage section of our README](https://github.com/alma-oss/php-coding-standard?tab=readme-ov-file#usage)
 or more configuration options in [ECS documentation](https://github.com/easy-coding-standard/easy-coding-standard/tree/main?tab=readme-ov-file#configure).
 
 Some more reasoning and examples of configurations can also be seen [in ECS author blogpost](https://tomasvotruba.com/blog/new-in-ecs-simpler-config).
@@ -88,7 +88,7 @@ $ vendor/bin/ecs check --ansi # new
 ### 6. Add some optional rules
 On top of default rules included in ecs.php, there are some more opinionated ones you may want to add.
 
-These suggested rules are listed in [README.md](https://github.com/lmc-eu/php-coding-standard?tab=readme-ov-file#add-custom-checks-or-override-default-settings).
+These suggested rules are listed in [README.md](https://github.com/alma-oss/php-coding-standard?tab=readme-ov-file#add-custom-checks-or-override-default-settings).
 
 ### 5. BE CAREFUL WITH SUGGESTED CHANGES! ⚠️
 

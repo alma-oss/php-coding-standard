@@ -87,7 +87,7 @@
 - Temporarily disable `ArrayDeclarationSniff.ValueNoNewline` because of [bug](https://github.com/squizlabs/PHP_CodeSniffer/issues/2937) in PHP_CodeSniffer 3.5.5.
 
 ## 2.0.0 - 2020-03-02
-- BC: change the way the standard is imported to your `easy-coding-standard.yaml` (change `%vendor_dir%` placeholder directly to name of the vendor directory like `vendor`). See example in [README](https://github.com/lmc-eu/php-coding-standard#usage).
+- BC: change the way the standard is imported to your `easy-coding-standard.yaml` (change `%vendor_dir%` placeholder directly to name of the vendor directory like `vendor`). See example in [README](https://github.com/alma-oss/php-coding-standard#usage).
 - Drop PHP 7.1 support.
 - Require EasyCodingStandard 7+.
 - `VisibilityRequiredFixer` now check visibility is declared also on class constants.
