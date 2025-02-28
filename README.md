@@ -17,7 +17,7 @@ To change the package, you only need to do the following changes in your project
 ### 1. Update dependency in composer.json
 ```diff
 -        "lmc/coding-standard": "^4.1",
-+        "almacareer/coding-standard": "^4.1",
++        "almacareer/coding-standard": "^4.2",
 ```
 
 and then run `composer update`.
