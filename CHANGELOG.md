@@ -6,6 +6,13 @@
 
 ## Unreleased
 
+## 4.2.0 - 2025-02-28
+- Rename the package from "Alma Career Czechia Standard for PHP" to more broad "Alma Career Coding Standard for PHP". 🎉
+- Change composer package name to `almacareer/coding-standard`. Previous `lmc/coding-standard` is now deprecated.
+- Move GitHub repository from `lmc-eu/php-coding-standard` to `alma-oss/php-coding-standard`.
+- Update PHP CS Fixer to fixed version.
+- Add `SetList::ALMACAREER` for easier importing of the coding standard.
+
 ## 4.1.2 - 2024-12-27
 - Restrict php-cs-fixer version 3.65.0 (included in ECS version 12.4+) from being installed because of [bug in `NullableTypeDeclarationFixer`](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues/8330).
 
