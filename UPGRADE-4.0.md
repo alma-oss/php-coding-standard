@@ -1,11 +1,12 @@
 # Upgrading from 3.x to 4.0
 
 ### 1. Update dependency in composer.json
-In the `require-dev` section of `composer.json` change the version constraint:
+In the `require-dev` section of `composer.json` change the version constraint. This also includes
+renaming of the package to `almacareer/coding-standard`:
 
 ```diff
 -        "lmc/coding-standard": "^3.3",
-+        "lmc/coding-standard": "^4.0",
++        "almacareer/coding-standard": "^4.0",
 ```
 
 Then run `composer update`.
@@ -16,13 +17,14 @@ The configuration now uses `ECSConfig` class instead of `ContainerConfigurator`.
 Update your `ecs.php` file to use the new configuration style:
 
 ```diff
++use Lmc\CodingStandard\Set\SetList;
 -use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 +use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 -return static function (ContainerConfigurator $containerConfigurator): void {
 +return ECSConfig::configure()
 +    ->withSets([
-+        __DIR__ . '/vendor/lmc/coding-standard/ecs.php',
++        SetList::ALMACAREER,
 +    ]);
     // ...
 ```

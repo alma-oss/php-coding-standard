@@ -1,6 +1,6 @@
 # Alma Career Coding Standard for PHP
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/lmc/coding-standard.svg?style=flat-square)](https://packagist.org/packages/lmc/coding-standard)
+[![Latest Stable Version](https://img.shields.io/packagist/v/almacareer/coding-standard.svg?style=flat-square)](https://packagist.org/packages/almacareer/coding-standard)
 
 PHP coding standard used in [Alma Career][Alma Career] (formerly LMC) products.
 
@@ -9,10 +9,36 @@ various checks to make sure the code is readable, follows the same conventions, 
 
 We use [EasyCodingStandard][ecs] to define and execute checks created for both [PHP-CS-Fixer] and [PHP_CodeSniffer].
 
+## Switching from lmc/coding-standard
+
+The package `almacareer/coding-standard` is 1:1 replacement for the previous deprecated `lmc/coding-standard` package.
+To change the package, you only need to do the following changes in your project:
+
+### 1. Update dependency in composer.json
+```diff
+-        "lmc/coding-standard": "^4.1",
++        "almacareer/coding-standard": "^4.1",
+```
+
+and then run `composer update`.
+
+### 2. Change path to ecs.php in your ecs.php
+
+You can also use `SetList:ALMACAREER` instead of explicitly specifying path to the file:
+
+```diff
+    ->withSets(
+        [
+-            __DIR__ . '/vendor/lmc-eu/coding-standard/ecs.php',
++            \Lmc\CodingStandard\Set\SetList::ALMACAREER,
+        ]
+    );
+```
+
 ## Installation
 
 ```bash
-composer require --dev lmc/coding-standard
+composer require --dev almacareer/coding-standard
 ```
 
 ## Usage
