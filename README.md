@@ -20,11 +20,11 @@ To change the package, you only need to do the following changes in your project
 +        "almacareer/coding-standard": "^4.2",
 ```
 
-and then run `composer update`.
+And then run `composer update`.
 
 ### 2. Change path to ecs.php in your ecs.php
 
-You can also use `SetList:ALMACAREER` instead of explicitly specifying path to the file:
+You can also use `SetList::ALMACAREER` instead of explicitly specifying path to the file:
 
 ```diff
     ->withSets(
