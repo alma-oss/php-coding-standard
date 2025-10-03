@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Lmc\CodingStandard\Integration;
 
@@ -11,24 +13,32 @@ class CodingStandardTest extends TestCase
 {
     private string $tempFixtureFile;
 
-    /** @after */
+    /**
+     * @after
+     */
     protected function cleanUpTempFixtureFile(): void
     {
         unlink($this->tempFixtureFile);
     }
 
     /**
-     * @test
      * @dataProvider provideFilesToFix
      */
-    public function shouldFixFile(string $wrongFile, string $correctFile): void
+    public function testShouldFixFile(string $wrongFile, string $correctFile): void
     {
         $fixedFile = $this->runEcsCheckOnFile($wrongFile);
+        $fileContents = file_get_contents($fixedFile);
+        if ($fileContents === false) {
+            $this->fail('Could not read file ' . $fixedFile);
+        }
 
-        $this->assertStringEqualsFile($correctFile, file_get_contents($fixedFile));
+        $this->assertStringEqualsFile($correctFile, $fileContents);
     }
 
-    public function provideFilesToFix(): array
+    /**
+     * @return array<string, array{string, string}>
+     */
+    public static function provideFilesToFix(): array
     {
         return [
             'Basic' => [__DIR__ . '/Fixtures/Basic.wrong.php.inc', __DIR__ . '/Fixtures/Basic.correct.php.inc'],
@@ -42,30 +52,36 @@ class CodingStandardTest extends TestCase
     }
 
     /**
-     * @test
      * @requires PHP >= 8.1
      */
-    public function shouldFixPhp81(): void
+    public function testShouldFixPhp81(): void
     {
         $fixedFile = $this->runEcsCheckOnFile(__DIR__ . '/Fixtures/Php81.wrong.php.inc');
+        $fileContents = file_get_contents($fixedFile);
+        if ($fileContents === false) {
+            $this->fail('Could not read file ' . $fixedFile);
+        }
 
         $this->assertStringEqualsFile(
             __DIR__ . '/Fixtures/Php81.correct.php.inc',
-            file_get_contents($fixedFile),
+            $fileContents,
         );
     }
 
     /**
-     * @test
      * @requires PHP >= 8.2
      */
-    public function shouldFixPhp82(): void
+    public function testShouldFixPhp82(): void
     {
         $fixedFile = $this->runEcsCheckOnFile(__DIR__ . '/Fixtures/Php82.wrong.php.inc');
+        $fileContents = file_get_contents($fixedFile);
+        if ($fileContents === false) {
+            $this->fail('Could not read file ' . $fixedFile);
+        }
 
         $this->assertStringEqualsFile(
             __DIR__ . '/Fixtures/Php82.correct.php.inc',
-            file_get_contents($fixedFile),
+            $fileContents,
         );
     }
 

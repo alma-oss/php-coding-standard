@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Lmc\CodingStandard\Sniffs;
 
@@ -25,15 +27,21 @@ abstract class AbstractSniffTestCase extends TestCase
 
     /**
      * @param array<int, string> $expectedErrors
-     * @param array<int, array> $actualErrors
+     * @param array<int, array<int, array<string, mixed>>> $actualErrors
      */
     protected function assertErrors(array $expectedErrors, array $actualErrors): void
     {
         $actualLinesToErrorsMap = [];
         foreach ($actualErrors as $line => $error) {
             $error = reset($error);
-            $errorMessage = reset($error)['message'];
-            $actualLinesToErrorsMap[$line] = $errorMessage;
+            if ($error === false) {
+                continue;
+            }
+            $errorMessage = reset($error);
+            if (!is_array($errorMessage) || !isset($errorMessage['message'])) {
+                continue;
+            }
+            $actualLinesToErrorsMap[$line] = $errorMessage['message'];
         }
 
         $this->assertSame($expectedErrors, $actualLinesToErrorsMap);

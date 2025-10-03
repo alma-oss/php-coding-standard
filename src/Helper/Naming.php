@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * Originally part of https://github.com/symplify/symplify
@@ -79,7 +81,7 @@ final class Naming
 
         $fqnClassName = $this->getFqnClassName($file, $completeClassName, $classNameStartPosition);
         if ($fqnClassName !== '') {
-            return ltrim($fqnClassName, self::NAMESPACE_SEPARATOR);
+            return mb_ltrim($fqnClassName, self::NAMESPACE_SEPARATOR);
         }
 
         return $completeClassName;

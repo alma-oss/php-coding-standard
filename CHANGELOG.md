@@ -5,6 +5,7 @@
 <!-- There is always Unreleased section on the top. Subsections (Added, Changed, Fixed, Removed) should be added as needed. -->
 
 ## Unreleased
+- Remove skip of BlankLineAfterOpeningTagFixer to be PSR-12 compliant.
 
 ## 4.2.0 - 2025-02-28
 - Rename the package from "Alma Career Czechia Standard for PHP" to more broad "Alma Career Coding Standard for PHP". 🎉

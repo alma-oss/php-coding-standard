@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 use Lmc\CodingStandard\Fixer\SpecifyArgSeparatorFixer;
 use Lmc\CodingStandard\Sniffs\Naming\AbstractClassNameSniff;
@@ -127,7 +129,6 @@ use PhpCsFixer\Fixer\Phpdoc\PhpdocTrimConsecutiveBlankLineSeparationFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocTrimFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocTypesFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocVarAnnotationCorrectOrderFixer;
-use PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer;
 use PhpCsFixer\Fixer\PhpTag\FullOpeningTagFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitConstructFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitDedicateAssertFixer;
@@ -638,7 +639,4 @@ return ECSConfig::configure()
         // Skip unwanted rules from ReturnTypeHintSniff
         ReturnTypeHintSniff::class . '.' . ReturnTypeHintSniff::CODE_MISSING_TRAVERSABLE_TYPE_HINT_SPECIFICATION => null,
         ReturnTypeHintSniff::class . '.' . ReturnTypeHintSniff::CODE_MISSING_ANY_TYPE_HINT => null,
-
-        // We use declare(strict_types=1); after opening tag
-        BlankLineAfterOpeningTagFixer::class => null,
     ]);
