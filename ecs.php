@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Lmc\CodingStandard\Fixer\SpecifyArgSeparatorFixer;
-use Lmc\CodingStandard\Sniffs\Naming\AbstractClassNameSniff;
-use Lmc\CodingStandard\Sniffs\Naming\ClassNameSuffixByParentSniff;
-use Lmc\CodingStandard\Sniffs\Naming\InterfaceNameSniff;
-use Lmc\CodingStandard\Sniffs\Naming\TraitNameSniff;
+use AlmaOss\CodingStandard\Fixer\SpecifyArgSeparatorFixer;
+use AlmaOss\CodingStandard\Sniffs\Naming\AbstractClassNameSniff;
+use AlmaOss\CodingStandard\Sniffs\Naming\ClassNameSuffixByParentSniff;
+use AlmaOss\CodingStandard\Sniffs\Naming\InterfaceNameSniff;
+use AlmaOss\CodingStandard\Sniffs\Naming\TraitNameSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Classes\DuplicateClassNameSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\CodeAnalysis\EmptyStatementSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\CodeAnalysis\ForLoopShouldBeWhileLoopSniff;

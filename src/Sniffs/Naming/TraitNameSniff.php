@@ -28,7 +28,7 @@ declare(strict_types=1);
  * SOFTWARE.
  */
 
-namespace Lmc\CodingStandard\Sniffs\Naming;
+namespace AlmaOss\CodingStandard\Sniffs\Naming;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;

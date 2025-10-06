@@ -28,10 +28,10 @@ declare(strict_types=1);
  * SOFTWARE.
  */
 
-namespace Lmc\CodingStandard\Sniffs\Naming;
+namespace AlmaOss\CodingStandard\Sniffs\Naming;
 
-use Lmc\CodingStandard\Helper\Naming;
-use Lmc\CodingStandard\Helper\SniffClassWrapper;
+use AlmaOss\CodingStandard\Helper\Naming;
+use AlmaOss\CodingStandard\Helper\SniffClassWrapper;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 

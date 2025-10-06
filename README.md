@@ -30,7 +30,7 @@ You can also use `SetList::ALMACAREER` instead of explicitly specifying path to 
     ->withSets(
         [
 -            __DIR__ . '/vendor/lmc-eu/coding-standard/ecs.php',
-+            \Lmc\CodingStandard\Set\SetList::ALMACAREER,
++            \AlmaOss\CodingStandard\Set\SetList::ALMACAREER,
         ]
     );
 ```
@@ -50,7 +50,7 @@ composer require --dev almacareer/coding-standard
 
 declare(strict_types=1);
 
-use Lmc\CodingStandard\Set\SetList;
+use AlmaOss\CodingStandard\Set\SetList;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 return ECSConfig::configure()
@@ -98,7 +98,7 @@ Below find examples of some more opinionated checks you may want to add dependin
 
 declare(strict_types=1);
 
-use Lmc\CodingStandard\Set\SetList;
+use AlmaOss\CodingStandard\Set\SetList;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitTestAnnotationFixer;
 use Symplify\EasyCodingStandard\Config\ECSConfig;

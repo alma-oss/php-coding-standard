@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lmc\CodingStandard\Helper;
+namespace AlmaOss\CodingStandard\Helper;
 
 use PHP_CodeSniffer\Config;
 use PHP_CodeSniffer\Files\LocalFile;

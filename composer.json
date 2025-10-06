@@ -28,7 +28,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Lmc\\CodingStandard\\": "src/"
+            "AlmaOss\\CodingStandard\\": "src/"
         },
         "files": [
             "src/polyfill.php"
@@ -36,7 +36,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Lmc\\CodingStandard\\": "tests/"
+            "AlmaOss\\CodingStandard\\": "tests/"
         }
     },
     "config": {

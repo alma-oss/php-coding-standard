@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lmc\CodingStandard\Helper;
+namespace AlmaOss\CodingStandard\Helper;
 
 use PHPUnit\Framework\TestCase;
 

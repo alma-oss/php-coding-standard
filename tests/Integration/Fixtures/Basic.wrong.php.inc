@@ -1,11 +1,11 @@
 <?php
 
-namespace Lmc\CodingStandard\Integration\Fixtures;
+namespace AlmaOss\CodingStandard\Integration\Fixtures;
 
 // NoUnneededImportAliasFixer
 use Bar\Foo as Foo;
 
-class Basic extends \Some\Other\Namespace\AbstractBasic implements \Lmc\CodingStandard\Integration\Fixtures\InterfaceFromThisNamespace // FullyQualifiedStrictTypesFixer
+class Basic extends \Some\Other\Namespace\AbstractBasic implements \AlmaOss\CodingStandard\Integration\Fixtures\InterfaceFromThisNamespace // FullyQualifiedStrictTypesFixer
 {
     const FOO = 'foo'; // ClassAttributesSeparationFixer
     function isEqual($a, ? string $b): ? bool // VisibilityRequiredFixer, CompactNullableTypeDeclarationFixer

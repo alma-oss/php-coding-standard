@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lmc\CodingStandard\Integration\Fixtures;
+namespace AlmaOss\CodingStandard\Integration\Fixtures;
 
 // NoUnneededImportAliasFixer
 use Bar\Foo;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lmc\CodingStandard\Sniffs;
+namespace AlmaOss\CodingStandard\Sniffs;
 
 use PHP_CodeSniffer\Config;
 use PHP_CodeSniffer\Files\LocalFile;
