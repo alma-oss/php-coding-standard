@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lmc\CodingStandard\Fixer\Fixtures;
+namespace AlmaOss\CodingStandard\Fixer\Fixtures;
 
 class Correct
 {

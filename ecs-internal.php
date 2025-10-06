@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Lmc\CodingStandard\Set\SetList;
+use AlmaOss\CodingStandard\Set\SetList;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\PHP\ForbiddenFunctionsSniff;
 use PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitTestAnnotationFixer;

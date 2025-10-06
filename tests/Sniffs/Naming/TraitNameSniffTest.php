@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Lmc\CodingStandard\Sniffs\Naming;
+namespace AlmaOss\CodingStandard\Sniffs\Naming;
 
-use Lmc\CodingStandard\Sniffs\AbstractSniffTestCase;
+use AlmaOss\CodingStandard\Sniffs\AbstractSniffTestCase;
 
 class TraitNameSniffTest extends AbstractSniffTestCase
 {

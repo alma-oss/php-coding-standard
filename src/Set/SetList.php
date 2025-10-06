@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lmc\CodingStandard\Set;
+namespace AlmaOss\CodingStandard\Set;
 
 class SetList
 {

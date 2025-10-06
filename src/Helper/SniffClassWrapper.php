@@ -28,7 +28,7 @@ declare(strict_types=1);
  * SOFTWARE.
  */
 
-namespace Lmc\CodingStandard\Helper;
+namespace AlmaOss\CodingStandard\Helper;
 
 use PHP_CodeSniffer\Files\File;
 use SlevomatCodingStandard\Helpers\TokenHelper;
