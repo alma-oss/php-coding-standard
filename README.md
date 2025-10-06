@@ -12,12 +12,15 @@ We use [EasyCodingStandard][ecs] to define and execute checks created for both [
 ## Switching from lmc/coding-standard
 
 The package `almacareer/coding-standard` is 1:1 replacement for the previous deprecated `lmc/coding-standard` package.
+
+⚠️ **Note:** Starting from version 5.0.0, the namespace has changed from `Lmc\CodingStandard` to `AlmaOss\CodingStandard`. See [UPGRADE-5.0.md](UPGRADE-5.0.md) for detailed upgrade instructions.
+
 To change the package, you only need to do the following changes in your project:
 
 ### 1. Update dependency in composer.json
 ```diff
 -        "lmc/coding-standard": "^4.1",
-+        "almacareer/coding-standard": "^4.2",
++        "almacareer/coding-standard": "^5.0",
 ```
 
 And then run `composer update`.
